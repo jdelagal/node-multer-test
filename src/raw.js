@@ -9,15 +9,16 @@ app.post('/raw', (req, res) => {
 
   // capture the encoded form data
   req.on('data', (data) => {
-    console.log(data.toString());
+    console.log(data.length);
   });
 
   // send a response when finished reading
   // the encoded form data
   req.on('end', () => {
+    console.log('ok');
     res.send('ok');
   });
 });
 
 
-app.listen(8080);
+app.listen(9000);
